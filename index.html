@@ -5,7 +5,7 @@
     <title>Lucas.</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!--<script src="script.js"></script>-->
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -14,8 +14,7 @@
 
        <nav class="navbar">
            <a href="#" class="active">Home</a>
-           <a href="#">CV</a>
-           <a href="#">Portfolio</a>
+           <a href="#portfolio">Portfolio</a>
        </nav>
    </header>
 
@@ -29,16 +28,135 @@
                 in different field for the past 3 years, from the Full stack Dev languages & framework (PHP, Vue.js, React, HTML, Symfony, C, Python) to the security network (CCNA, System Administrator) passing by some DevOps tool (Agile, Git).   </p>
             <p>I'm still looking to find my places in the IT industry, looking for opportunities to grow and learn in my personal carrier. You can find below my CV and in the work section all my projects that I have been working on. Thanks for your visit and don't hesitate to contact me for further information !</p>
             <div class="btn-box">
-                <a href="#">My CV</a>
+                <a href="doc/CV Lucas Silva 2022[3975].pdf">My CV</a>
                 <a href="#">Contact me</a>
             </div>
         </div>
-        <div class="cv "></div>
+        <div class="home-profile">
+            <img src="img/moi.jpg" class="image-profile" >
+        </div>
         <div class="home-sci">
             <a href="#"><i class='bx bxl-facebook'></i></a>
             <a href="#"><i class='bx bxl-github' ></i></a>
             <a href="#"><i class='bx bxl-linkedin' ></i></a>
         </div>
     </section>
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading"> Portfolio </h2>
+        <div class="my_portfolio">
+            <h2 class="table-title">Work table</h2>
+                <table>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Theme</th>
+                        <th>Worked Hours</th>
+                        <th>Validated Hours</th>
+                        <th>Start</th>
+                        <th>End</th>
+                    </tr>
+            <!-- Ajoutez vos entrées de tableau ici -->
+                    <tr>
+                        <td>1</td>
+                        <td><a href="#" onclick="showPopup(1)" class="popup">Scoutisme</a></td>
+                        <td>Externe</td>
+                        <td>Infinite</td>
+                        <td>10h</td>
+                        <td>2017-09</td>
+                        <td>2022-09</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><a href="#" onclick="showPopup(2)" class="popup">Information Website</a></td>
+                        <td>Web Development</td>
+                        <td>45h</td>
+                        <td>10h</td>
+                        <td>2021-09</td>
+                        <td>2022-09</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><a href="#" onclick="showPopup(1)" class="popup">Erasmus in Lithuania</a></td>
+                        <td>Exchange & Culture</td>
+                        <td>5 months</td>
+                        <td>N.A.</td>
+                        <td>2022-08</td>
+                        <td>2023-02</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><a href="#" onclick="showPopup(1)" 
+                            class="popup">
+                            IMAP/TCP/UDP Course
+                        </a></td>
+                        <td>Sys Admin</td>
+                        <td>15h</td>
+                        <td>10h</td>
+                        <td>2023-01</td>
+                        <td>2023-02</td>
+                    </tr>
+                    <tr class="final">
+                        <td>Total</td>
+                        <td></td>
+                        <td></td>
+                        <td>110h</td>
+                        <td>30h</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+            </table>
+        </div>
+            
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Address" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" placeholder="Mobile Number" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Subject" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+            <div class="textarea-field">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <span class="focus"></span>
+            </div>
+            <div class="btn-box btns">
+                <button type="submit"></button>
+            </div>
+        </form>
+    </section>
+    
+
+    <div id="popup_1" class="hidden">
+        <h3>Justification du travail</h3>
+        <p>Ceci est une justification</p>
+        <!-- Ajoutez vos photos ici -->
+        <!--<img src="photo2.jpg" alt="Photo 2">-->
+      </div>
+      <script>
+        function showPopup(entryId) {
+          var popup = document.getElementById("popup_" +entryId);
+          popup.classList.remove("hidden");
+          // Récupérez les informations spécifiques de l'entrée en utilisant entryId
+          // et mettez à jour le contenu de la popup en conséquence
+        }
+      </script>
 </body>
 </html>
